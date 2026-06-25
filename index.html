@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator — Yacine</title>
+</head>
+<body>
+
+    <!-- Background layers (put your anime image as bg.jpg next to index.html) -->
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+
+    <header class="glass">
+        <h1 class="title">YAC<span>INE</span></h1>
+    </header>
+
+    <section class="glass">
+        <h4>Choose your password options and click generate</h4>
+
+        <div class="options">
+            <div class="option-item">
+                <label for="uppercheck">Uppercase A–Z</label>
+                <label class="toggle">
+                    <input type="checkbox" id="uppercheck" checked>
+                    <span class="slider-toggle"></span>
+                </label>
+            </div>
+            <div class="option-item">
+                <label for="lowercheck">Lowercase a–z</label>
+                <label class="toggle">
+                    <input type="checkbox" id="lowercheck" checked>
+                    <span class="slider-toggle"></span>
+                </label>
+            </div>
+            <div class="option-item">
+                <label for="numberscheck">Numbers 0–9</label>
+                <label class="toggle">
+                    <input type="checkbox" id="numberscheck" checked>
+                    <span class="slider-toggle"></span>
+                </label>
+            </div>
+            <div class="option-item">
+                <label for="symbolescheck">Symbols !@#$</label>
+                <label class="toggle">
+                    <input type="checkbox" id="symbolescheck">
+                    <span class="slider-toggle"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="length-control">
+            <div class="length-header">
+                <label for="lengthrange">Password Length</label>
+                <span id="length-display">12</span>
+            </div>
+            <input type="range" id="lengthrange" min="4" max="32" value="12" step="1">
+        </div>
+
+        <div class="generation">
+            <button id="generate">⚡ GENERATE</button>
+        </div>
+    </section>
+
+    <footer class="glass">
+        <p class="password-display">
+            Generated: <span id="result">···</span>
+        </p>
+        <p class="credit">crafted by <span>Yacine</span></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
